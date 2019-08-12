@@ -1,24 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>timezra.maven</groupId>
+    <parent>
+        <groupId>com.mars</groupId>
+        <artifactId>java-scala-code-coverage-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
     <artifactId>scala-code-coverage-example</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Example of Scala Project Code Coverage via Maven</name>
-
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <scala.version>2.11.12</scala.version>
-        <compiler.plugin.version>3.8.1</compiler.plugin.version>
-        <project-info-reports.plugin.version>3.0.0</project-info-reports.plugin.version>
-        <site.plugin.version>3.8.2</site.plugin.version>
-        <surefire.plugin.version>2.22.2</surefire.plugin.version>
-        <scala.plugin.version>4.1.1</scala.plugin.version>
-        <scoverage.plugin.version>1.4.0-RC1</scoverage.plugin.version>
-        <scalatest.plugin.version>2.0.0</scalatest.plugin.version>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -103,6 +95,9 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
                     <version>${site.plugin.version}</version>
+                    <configuration>
+                        <skip>false</skip>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
