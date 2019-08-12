@@ -24,6 +24,7 @@
     <modules>
         <module>scala-example</module>
         <module>java-example</module>
+        <module>java-scala-in-one-project</module>
     </modules>
 
     <build>
