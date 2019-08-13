@@ -6,4 +6,8 @@ case class CaseExample(
   def sayHello() {
     println(s"${greeting} ${name}")
   }
+
+  def notTested(): Unit = {
+    println("not tested")
+  }
 }

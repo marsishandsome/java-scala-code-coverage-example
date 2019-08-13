@@ -16,4 +16,8 @@ class App {
   int subtract(int a, int b) {
     return a - b;
   }
+
+  void notTested() {
+    System.out.println("not tested");
+  }
 }
