@@ -63,14 +63,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.scoverage</groupId>
-                <artifactId>scoverage-maven-plugin</artifactId>
-                <version>${scoverage.plugin.version}</version>
-                <configuration>
-                    <highlighting>true</highlighting>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.scalatest</groupId>
                 <artifactId>scalatest-maven-plugin</artifactId>
                 <version>${scalatest.plugin.version}</version>
@@ -122,6 +114,9 @@
                 <version>${scoverage.plugin.version}</version>
                 <reportSets>
                     <reportSet>
+                        <configuration>
+                            <highlighting>true</highlighting>
+                        </configuration>
                         <reports>
                             <report>report</report> <!-- select only one report from: report, integration-report and report-only reporters -->
                         </reports>
